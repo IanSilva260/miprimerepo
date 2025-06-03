@@ -1,0 +1,15 @@
+name: CI básico
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v3
+
+      - name: Ejecutar mensaje de prueba
+        run: echo "GitHub Actions funcionando correctamente"
